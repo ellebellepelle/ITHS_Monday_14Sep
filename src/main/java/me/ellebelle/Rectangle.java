@@ -9,17 +9,31 @@ public class Rectangle {
     private Color color;
 
 
+    // java använder automatiskt toString() när jag skriver ut objekt.
+    // så jag behöver @Override:a den toString() som java-objektet har från
+    // klassen Object. för den ger bara adressen, jag behöver göra
+    // så att jag får värdena/datan i objektet.
+    // När någon vill göra mitt Rectangle-objekt till text, använd MIN version ist.
+    @Override
+    public String toString() {
+        return "Rectangle: width = " + width +
+                ", height = " + height +
+                ", color = " + color;
+    }
+
 
     // KONSTRUKTOR har ingen returtyp, har samma namn som klassen
     public Rectangle() {
         width = 1;
         height = 1;
+        color = new Color(0, 0, 0);
     }
 
     // overloadeing, samma namn på en metod men med olika in parametrar
-    public Rectangle(int w, int h) {
+    public Rectangle(int w, int h, Color c) {
         width = w;
         height = h;
+        color = c;
     }
 
     // enda sättet att få åtkomst till våra privata fält är genom publika metoder:
