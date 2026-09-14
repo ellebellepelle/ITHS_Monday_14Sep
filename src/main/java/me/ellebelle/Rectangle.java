@@ -5,8 +5,22 @@ public class Rectangle {
     // vi vill ha dessa privata. Den enda som kan skriva till dessa (initiera
     //  variablerna) är endast kod i den egna klassen.
     private int width;
-    private int height;
+    private int height;  // kan sätta värde = 5;
     private Color color;
+
+
+
+    // KONSTRUKTOR har ingen returtyp, har samma namn som klassen
+    public Rectangle() {
+        width = 1;
+        height = 1;
+    }
+
+    // overloadeing, samma namn på en metod men med olika in parametrar
+    public Rectangle(int w, int h) {
+        width = w;
+        height = h;
+    }
 
     // enda sättet att få åtkomst till våra privata fält är genom publika metoder:
     // jag görmmer min data, gör den privat, dvs har byggt objekt med inkapslig.
