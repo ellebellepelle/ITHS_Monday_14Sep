@@ -8,6 +8,8 @@ public class VehicleRegister {
 
 
         IO.println(vehicle.getModel());
+        IO.println(vehicle.getPassengers());
         IO.println(vehicle2.getModel());
+        IO.println(vehicle2.getPassengers());
     }
 }
