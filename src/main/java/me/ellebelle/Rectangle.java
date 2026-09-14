@@ -41,6 +41,19 @@ public class Rectangle {
         color = c;
     }
 
+
+
+    // Copy Konstruktor
+    public Rectangle(Rectangle rectangle) {
+        this.width = rectangle.width;
+        this.height = rectangle.height;
+        this.color = rectangle.color;
+    }
+
+
+
+
+
     // enda sättet att få åtkomst till våra privata fält är genom publika metoder:
     // jag görmmer min data, gör den privat, dvs har byggt objekt med inkapslig.
     // dessa metoder är inte static för de tillhör inte klassen utan de tillhör objekt.

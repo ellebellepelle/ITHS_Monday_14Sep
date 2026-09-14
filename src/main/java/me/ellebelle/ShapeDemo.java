@@ -22,5 +22,12 @@ public class ShapeDemo {
         i minnet pekar på.
          */
 
+
+
+        // kod till copy-konstruktorn
+        Rectangle rectangle4 = new Rectangle(rectangle2);
+        // funkar eftersom jag har en konstruktor som tar en inparameter som är ett objekt (rectanglr2)
+
+
     }
 }
