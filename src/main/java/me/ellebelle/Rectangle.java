@@ -49,6 +49,10 @@ public class Rectangle {
     public void setColor(Color color) {
         this.color = color;
     }
+
+    public int getArea() {
+        return width * height;
+    }
 }
 
 record Color(int red, int green, int blue) {}
