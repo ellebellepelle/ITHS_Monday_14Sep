@@ -31,6 +31,11 @@ public class Rectangle {
 
     // overloadeing, samma namn på en metod men med olika in parametrar
     public Rectangle(int w, int h, Color c) {
+        // verifiera så vi inte skickar in "dålig" data
+        if(w < 1 || h < 1 || c == null) {
+            throw new IllegalArgumentException(); // vi gör ett objekt ev en viss klass som innehåller Exception och
+            // det gör vi bäst med IllegalArg...
+        }
         width = w;
         height = h;
         color = c;
@@ -45,6 +50,11 @@ public class Rectangle {
     }
 
     public void setWidth(int width) {
+       // if ( width > 0)
+       //         this.width = width;
+        if (width < 1) {
+            throw new IllegalArgumentException();
+        }
         this.width = width;
     }
 
