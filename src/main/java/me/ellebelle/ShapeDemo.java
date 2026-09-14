@@ -27,6 +27,13 @@ public class ShapeDemo {
         // kod till copy-konstruktorn
         Rectangle rectangle4 = new Rectangle(rectangle2);
         // funkar eftersom jag har en konstruktor som tar en inparameter som är ett objekt (rectanglr2)
+        IO.println(rectangle2.getWidth());
+        IO.println(rectangle4.getHeight());
+        rectangle4.setWidth(50);
+        IO.println(rectangle2.getWidth());
+        IO.println(rectangle4.getWidth());
+
+        Rectangle rectangle5 = rectangle2.copyOf(rectangle2);
 
 
     }

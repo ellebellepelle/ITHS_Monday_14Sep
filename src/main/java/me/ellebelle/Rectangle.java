@@ -50,8 +50,25 @@ public class Rectangle {
         this.color = rectangle.color;
     }
 
+    // ist kan jag ta informationen rectanglr.width etc och skicka till copy konstruktor:
+    // (då används konstruktorn som är ovanför copy konstruktorn)
+    /*
+    public Rectangle(Rectangle rectanglr) {
+        this(rectangle.width, reckangle.height, rectangle.color)
+        }
+     */
+
+    // kan även återanvända konstruktorn som är den mest avancerade för att underlätta i
+    // de andra konstruktorerna. rad 14 (än så länge) i lärarens Rectangle-klass.
+    // Konstruktor chaining,, kedja ihop konstruktorerna.
 
 
+
+
+    // metod
+    public Rectangle copyOf(Rectangle orig) {
+        return new Rectangle(orig);
+    }
 
 
     // enda sättet att få åtkomst till våra privata fält är genom publika metoder:
